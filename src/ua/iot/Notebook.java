@@ -1,5 +1,4 @@
 package ua.iot;
-
 public record Notebook(String color,int pageAmount,int priceInUAH,int publishedYear, String material,String format) {
 public static  String country="Ukraine";
 
