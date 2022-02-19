@@ -13,7 +13,6 @@ public class Main {
         System.out.println();
         System.out.println(notebook3);
         System.out.println();
-        Notebook.displayCountry();
 	}
 
 }
