@@ -1,12 +1,8 @@
-package ua.lviv.iot.lab.models;
+package ua.lviv.iot.lab3.models;
 
 
 
 
-
-import ua.lviv.iot.lab.models.MemberForPermanentJob;
-import ua.lviv.iot.lab.models.MemberForTemporaryJob;
-import ua.lviv.iot.lab.models.PositionInformation;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,9 +1,9 @@
-package ua.lviv.iot.lab.manager;
+package ua.lviv.iot.lab3.manager;
 
 
 
-import ua.lviv.iot.lab.models.DataBase;
-import ua.lviv.iot.lab.models.PositionInformation;
+import ua.lviv.iot.lab3.models.DataBase;
+import ua.lviv.iot.lab3.models.PositionInformation;
 
 import java.util.ArrayList;
 import java.util.Comparator;
