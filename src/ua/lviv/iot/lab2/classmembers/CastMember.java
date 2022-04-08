@@ -1,6 +1,6 @@
-package ua.lviv.iot.lab.classmembers;
+package ua.lviv.iot.lab2.classmembers;
 
-import ua.lviv.iot.lab.PositionInformation;
+import ua.lviv.iot.lab2.PositionInformation;
 
 public  class CastMember extends PositionInformation {
     protected String occupation;

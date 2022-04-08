@@ -1,24 +1,19 @@
-package ua.lviv.iot.lab.classmembers;
+package ua.lviv.iot.lab2.classmembers;
 
-import ua.lviv.iot.lab.PositionInformation;
+import ua.lviv.iot.lab2.PositionInformation;
 
-enum FutureProjects{
-    UKRAINEINFIRE,
-    DARKCHRISTMAS,
-    LIVEFOREVORE;
-}
-public class FilmDirector extends PositionInformation {
-    protected FutureProjects futureCordinatedProjects;
+public class Producer extends PositionInformation {
+    protected String typeOfProducer;
 
-    public FilmDirector(String name, int age,
-                        String educationDegree, int workExperience,
-                        int salaryInUAHperHour, int workingHoursPerDay) {
+    public Producer(String name, int age,
+                    String educationDegree, int workExperience,
+                    int salaryInUAHperHour, int workingHoursPerDay,String typeOfProducer) {
         super(name, age,  educationDegree, workExperience, salaryInUAHperHour, workingHoursPerDay);
+        this.typeOfProducer=typeOfProducer;
     }
-
     @Override
     public String toString() {
-        return "Film Director{" +
+        return "Film Producer{" +
                 "Name:" + name + '\'' +
                 ", Age:" + age +
                 ", EducationDegree:" + educationDegree + '\'' +
@@ -26,6 +21,7 @@ public class FilmDirector extends PositionInformation {
                 ", Email:" + name +"@com"+ '\'' +
                 ", Salary:" + salaryInUAHperHour +
                 ", WorkingHoursPerDay:" + workingHoursPerDay +
+                ", Producer type:" + typeOfProducer +
                 '}';
     }
 }

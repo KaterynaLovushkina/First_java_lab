@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab;
+package ua.lviv.iot.lab2;
 
 public abstract class PositionInformation {
     protected String name;
