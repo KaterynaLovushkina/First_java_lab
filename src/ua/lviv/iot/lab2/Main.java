@@ -1,8 +1,8 @@
-package ua.lviv.iot.lab;
+package ua.lviv.iot.lab2;
 
-import ua.lviv.iot.lab.classmembers.CastMember;
-import ua.lviv.iot.lab.classmembers.FilmDirector;
-import ua.lviv.iot.lab.classmembers.Producer;
+import ua.lviv.iot.lab2.classmembers.CastMember;
+import ua.lviv.iot.lab2.classmembers.FilmDirector;
+import ua.lviv.iot.lab2.classmembers.Producer;
 
 import java.util.*;
 
