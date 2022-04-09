@@ -1,4 +1,6 @@
+
 package ua.lviv.iot.lab3.models;
+
 
 public abstract class PositionInformation {
     private String occupation;

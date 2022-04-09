@@ -1,5 +1,5 @@
 
-# Java labs 3
+# Third java lab
 Programming part 2
 Film studio. We need to implement a hierarchy of positions that are involved in the production of the film.
 Search for employees who are needed to make a documentary film from lab2.
