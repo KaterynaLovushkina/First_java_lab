@@ -1,6 +1,8 @@
-package ua.lviv.iot.lab;
 
-import ua.lviv.iot.lab.manager.Manager;
+package ua.lviv.iot.lab3;
+
+import ua.lviv.iot.lab3.manager.Manager;
+
 
 public class Main {
     public static void main(String[] args) {

@@ -1,6 +1,7 @@
-package ua.lviv.iot.lab.models;
 
-import ua.lviv.iot.lab.models.PositionInformation;
+package ua.lviv.iot.lab3.models;
+import ua.lviv.iot.lab3.models.PositionInformation;
+
 
 public class MemberForPermanentJob extends PositionInformation {
     private WorkingProjects workingProjects;
