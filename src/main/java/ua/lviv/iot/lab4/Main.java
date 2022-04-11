@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab3;
+package ua.lviv.iot.lab4;
 
 import ua.lviv.iot.lab3.manager.Manager;
 
@@ -7,8 +7,8 @@ public class Main {
         //DataBase.getMembers().forEach(System.out::println);
         Manager manager=new Manager();
         manager.findMembersForFilm("actress");
-        manager.findMembersForFilm("actor");
         manager.findMembersForFilm("operator");
+        manager.findMembersForFilm("actor");
         manager.findMembersForFilm("art director");
         manager.findMembersForFilm("producer");
 
