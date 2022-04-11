@@ -1,4 +1,4 @@
-# Java las
+# Java labs
 Prpgramming part 2
 
 
