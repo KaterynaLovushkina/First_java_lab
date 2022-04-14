@@ -1,5 +1,14 @@
 package ua.lviv.iot.lab3.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
+
 public class MemberForPermanentJob extends PositionInformation {
     private WorkingProjects workingProjects;
     private double salaryPerMonthsInUAH;
@@ -8,15 +17,6 @@ public class MemberForPermanentJob extends PositionInformation {
         super(occupation, name, age, educationDegree, workExperience);
         this.salaryPerMonthsInUAH=salaryPerMonthsInUAH;
     }
-
-    public double getSalary() {
-        return salaryPerMonthsInUAH;
-    }
-
-    public void setSalary(double salaryPerMonthsInUAH) {
-        this.salaryPerMonthsInUAH = salaryPerMonthsInUAH;
-    }
-
     @Override
     public String toString() {
         return "Member{" +
@@ -28,4 +28,5 @@ public class MemberForPermanentJob extends PositionInformation {
                 "  Salary per month:" + salaryPerMonthsInUAH+" UAH" +
                 '}';
     }
+
 }
