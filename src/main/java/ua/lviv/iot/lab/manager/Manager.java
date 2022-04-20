@@ -1,9 +1,8 @@
-package ua.lviv.iot.lab3.manager;
+package ua.lviv.iot.lab.manager;
 
 
-
-import ua.lviv.iot.lab3.models.DataBase;
-import ua.lviv.iot.lab3.models.PositionInformation;
+import ua.lviv.iot.lab.models.DataBase;
+import ua.lviv.iot.lab.models.PositionInformation;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -18,13 +17,12 @@ public class Manager {
         return staffForFIlm;
     }
 
-
-    public List<PositionInformation> findMembersForFilm(String occupation){
+    public List<PositionInformation> findMembersForFilm(List<PositionInformation> listOfMembers,String occupation){
         List<PositionInformation> temp=new ArrayList<>();
-        long occurrences = IntStream.range(0, DataBase.getMembers().size())
-                .filter(i -> occupation.equals(DataBase.getMembers().get(i).getOccupation()))
+        long occurrences = IntStream.range(0, listOfMembers.size())
+                .filter(i -> occupation.equals(listOfMembers.get(i).getOccupation()))
                 .count();
-        for(PositionInformation member:DataBase.getMembers()){
+        for(PositionInformation member:listOfMembers){
             if(member.getOccupation().equals(occupation)) {
                 if(occurrences<3){
                     staffForFIlm.add(member);
@@ -39,39 +37,37 @@ public class Manager {
                         staffForFIlm.addAll(sortedTemp);
                     }
                 }
-                }
             }
+        }
         return staffForFIlm;
 
     }
-    public List<PositionInformation> sortByWorkExperience( boolean isDescendingOrder){
+    public List<PositionInformation> sortByWorkExperience( List<PositionInformation> sortedlist,boolean isDescendingOrder){
         List<PositionInformation> sortedStaff;
         if(isDescendingOrder==true){
-             sortedStaff=staffForFIlm.stream()
+            sortedStaff=sortedlist.stream()
                     .sorted(Comparator.comparing(PositionInformation::getWorkExperience).reversed())
                     .collect(Collectors.toList());
         }
         else{
-              sortedStaff=staffForFIlm.stream()
-                .sorted(Comparator.comparing(PositionInformation::getWorkExperience))
-                .collect(Collectors.toList());
-    }
+            sortedStaff=sortedlist.stream()
+                    .sorted(Comparator.comparing(PositionInformation::getWorkExperience))
+                    .collect(Collectors.toList());
+        }
         return sortedStaff;
     }
-    public List<PositionInformation> sortByAge(boolean isDescendingOrder){
+    public List<PositionInformation> sortByAge(List<PositionInformation> sortedlist,boolean isDescendingOrder){
         List<PositionInformation> sortedStaff;
         if(isDescendingOrder==true) {
-            sortedStaff = staffForFIlm.stream()
+            sortedStaff = sortedlist.stream()
                     .sorted(Comparator.comparing(PositionInformation::getAge).reversed())
                     .collect(Collectors.toList());
         }
         else{
-            sortedStaff=staffForFIlm.stream()
+            sortedStaff=sortedlist.stream()
                     .sorted(Comparator.comparing(PositionInformation::getAge))
                     .collect(Collectors.toList());
         }
         return sortedStaff;
     }
-    }
-
-
+}

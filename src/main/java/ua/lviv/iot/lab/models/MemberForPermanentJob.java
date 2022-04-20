@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab3.models;
+package ua.lviv.iot.lab.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -10,7 +10,7 @@ import lombok.ToString;
 @ToString
 
 public class MemberForPermanentJob extends PositionInformation {
-    private WorkingProjects workingProjects;
+    //private WorkingProjects workingProjects;
     private double salaryPerMonthsInUAH;
 
     public MemberForPermanentJob(String occupation, String name, int age, String educationDegree, int workExperience,double salaryPerMonthsInUAH) {

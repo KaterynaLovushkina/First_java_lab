@@ -1,18 +1,16 @@
-package ua.lviv.iot.lab3.models;
-
-
-
-
+package ua.lviv.iot.lab.models;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
-public class DataBase {
+public abstract class DataBase {
+     static List<PositionInformation> staffList;
     public static List<PositionInformation> getMembers(){
-        List<PositionInformation> staffList=new ArrayList<>();
+        staffList=new LinkedList<>();
         staffList.add(new MemberForPermanentJob("director","Vlad",34,"bachelor",5,25000));
         staffList.add(new MemberForPermanentJob("director","Solomiya",45,"magister",17,34000));
-        staffList.add(new MemberForPermanentJob("art director","Petro",30,"bachelo",5,20000));
+        staffList.add(new MemberForPermanentJob("art director","Petro",30,"bachelor",5,20000));
         staffList.add(new MemberForPermanentJob("producer","Inga",40,"magister",13,40000));
         staffList.add(new MemberForTemporaryJob("operator","Oleksandr",35,"magister",11,550,6));
         staffList.add(new MemberForTemporaryJob("actress","Nina",25,"bachelor",4,400,5));
