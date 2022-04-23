@@ -23,10 +23,19 @@ public class MemberForPermanentJob extends PositionInformation {
                 " Occupation:'" +this.getOccupation() + '\'' +
                 ", Name:'" + this.getName() + '\'' +
                 ", Age:" + this.getAge() +
-                ", EducationDegree:'" + this.getEducationDegree() + '\'' +
-                ", WorkExperience:" + this.getWorkExperience() +
+                ", Education Degree:'" + this.getEducationDegree() + '\'' +
+                ", Work Experience:" + this.getWorkExperience() +
                 "  Salary per month:" + salaryPerMonthsInUAH+" UAH" +
                 '}';
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders()+","+"salary per month in UAH";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV()+","+getSalaryPerMonthsInUAH();
+    }
 }

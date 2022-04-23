@@ -97,6 +97,15 @@ class MemberForTemporaryJobTest {
     }
     @Test
     void testMemberToStringMethod(){
-        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, EducationDegree:'magister', WorkExperience:9 Salary per hour:200 UAH, WorkingHoursPerDay:6}",member.toString());
+        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education degree:'magister', Work experience:9 Salary per hour:200 UAH, Working hours per day:6}",member.toString());
     }
+    @Test
+    void getHeaders() {
+        assertEquals("occupation,name,age,education degree,work experience,salary in UAH per Hour,working hours per day",member.getHeaders());
+    }
+    @Test
+    void toCSV(){
+        assertEquals("actress,Sylvia,30,magister,9,200,6",member.toCSV());
+    }
+
 }

@@ -86,7 +86,15 @@ class MemberForPermanentJobTest {
     }
     @Test
     void testMemberToStringMethod(){
-        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, EducationDegree:'magister', WorkExperience:9  Salary per month:25000.0 UAH}",member.toString());
+        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education Degree:'magister', Work Experience:9  Salary per month:25000.0 UAH}",member.toString());
+    }
 
+    @Test
+    void getHeaders() {
+        assertEquals("occupation,name,age,education degree,work experience,salary per month in UAH",member.getHeaders());
+    }
+    @Test
+    void toCSV(){
+        assertEquals("actress,Sylvia,30,magister,9,25000.0",member.toCSV());
     }
 }

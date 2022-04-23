@@ -25,11 +25,21 @@ public class MemberForTemporaryJob extends PositionInformation {
                 " Occupation:'" + this.getOccupation() + '\'' +
                 ", Name:'" + this.getName() + '\'' +
                 ", Age:" + this.getAge() +
-                ", EducationDegree:'" + this.getEducationDegree() + '\'' +
-                ", WorkExperience:" + this.getWorkExperience() +
+                ", Education degree:'" + this.getEducationDegree() + '\'' +
+                ", Work experience:" + this.getWorkExperience() +
                 " Salary per hour:" + salaryInUAHperHour + " UAH" +
-                ", WorkingHoursPerDay:" + workingHoursPerDay +
+                ", Working hours per day:" + workingHoursPerDay +
                 '}';
 
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders()+","+"salary in UAH per Hour"+","+"working hours per day";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV()+","+getSalaryInUAHperHour()+","+getWorkingHoursPerDay();
     }
 }

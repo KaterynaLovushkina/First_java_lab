@@ -23,5 +23,15 @@ public abstract class PositionInformation {
                 this.name = name;
         }
         }
+        public String getHeaders() {
+                return "occupation" + "," + "name" + "," + "age" + "," + "education degree" + ","
+                        + "work experience";
+        }
+
+        public String toCSV() {
+                return getOccupation() + "," + getName() + "," + getAge() + "," + getEducationDegree()
+                        + "," + getWorkExperience();
+        }
+
 }
 
