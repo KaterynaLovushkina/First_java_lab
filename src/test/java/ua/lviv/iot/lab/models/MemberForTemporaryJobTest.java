@@ -17,18 +17,6 @@ class MemberForTemporaryJobTest {
         assertEquals("Sylvia",member.getName());
     }
 
-    @Test
-    void testMemberSetNameMethod() {
-        member.setName("Olga");
-        assertEquals("Sylvia",member.getName());
-    }
-
-    @Test
-    void testMemberSetNameIsEmptyMethod() {
-        MemberForTemporaryJob member=new MemberForTemporaryJob("actress","",30,"magister",9,200,6);
-        member.setName("Olga");
-        assertEquals("Olga",member.getName());
-    }
 
     @Test
     void testMembergetOccupationMethod() {

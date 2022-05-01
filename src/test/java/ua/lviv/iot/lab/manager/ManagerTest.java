@@ -2,19 +2,15 @@ package ua.lviv.iot.lab.manager;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import ua.lviv.iot.lab.models.DataBase;
 import ua.lviv.iot.lab.models.MemberForTemporaryJob;
 import ua.lviv.iot.lab.models.PositionInformation;
-
 import java.util.LinkedList;
 import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
-//import static ua.lviv.iot.lab.models.DataBase.staffList;
 
 class ManagerTest  {
     public Manager manager;
-    List<PositionInformation> listForFilm=new LinkedList<PositionInformation>();
+    final List<PositionInformation> listForFilm=new LinkedList<>();
     @BeforeEach
     void setUp(){
         manager=new Manager();
@@ -33,7 +29,7 @@ class ManagerTest  {
         manager.findMembersForFilm(listForFilm,"operator");
         manager.findMembersForFilm(listForFilm,"actress");
         manager.findMembersForFilm(listForFilm,"accountant");
-        assertEquals(4,manager.staffForFIlm.size());
+        assertEquals(4,manager.getStaffForFIlm().size());
     }
 
     @Test

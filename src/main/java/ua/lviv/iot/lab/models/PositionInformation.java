@@ -9,28 +9,24 @@ import lombok.Setter;
 @AllArgsConstructor
 public abstract class PositionInformation {
         private String occupation;
-        private String name;
+        private  String  name;
         private int age;
         private String educationDegree;
         private int workExperience;
 
-        public String getName() {
-                return name;
-        }
-
-        public void setName(String name) {
-                if(this.name.isEmpty()){
-                this.name = name;
-        }
-        }
-        public String getHeaders() {
-                return "occupation" + "," + "name" + "," + "age" + "," + "education degree" + ","
+        public  String getHeaders() {
+                return "occupation" + ","
+                        + "name" + ","
+                        + "age" + ","
+                        + "education degree" + ","
                         + "work experience";
         }
-
         public String toCSV() {
-                return getOccupation() + "," + getName() + "," + getAge() + "," + getEducationDegree()
-                        + "," + getWorkExperience();
+                return occupation + ","
+                        + name + ","
+                        + age + ","
+                        + educationDegree + ","
+                        + workExperience;
         }
 
 }

@@ -17,19 +17,6 @@ class MemberForPermanentJobTest {
     }
 
     @Test
-    void testMemberSetName() {
-        member.setName("Olga");
-        assertEquals("Sylvia",member.getName());
-    }
-
-    @Test
-    void testMemberSetNameIsEmpty() {
-        MemberForPermanentJob member=new MemberForPermanentJob("actress","",30,"magister",9,25000);
-        member.setName("Olga");
-        assertEquals("Olga",member.getName());
-    }
-
-    @Test
     void testMemberGetOccupationMethod() {
         assertEquals("actress",member.getOccupation());
     }
