@@ -10,7 +10,7 @@ class MemberForTemporaryJobTest {
     MemberForTemporaryJob member;
     @BeforeEach
     void prepareData(){
-        member=new MemberForTemporaryJob("actress","Sylvia",30,"magister",9,200,6);
+        member=new MemberForTemporaryJob("actress","Sylvia",30,"master",9,200,6);
     }
     @Test
     void testMemberGetNameMethod() {
@@ -30,7 +30,7 @@ class MemberForTemporaryJobTest {
 
     @Test
     void testMembergetEducationDegreeMethod() {
-        assertEquals("magister",member.getEducationDegree());
+        assertEquals("master",member.getEducationDegree());
     }
 
     @Test
@@ -85,7 +85,7 @@ class MemberForTemporaryJobTest {
     }
     @Test
     void testMemberToStringMethod(){
-        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education degree:'magister', Work experience:9 Salary per hour:200 UAH, Working hours per day:6}",member.toString());
+        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education degree:'master', Work experience:9 Salary per hour:200 UAH, Working hours per day:6}",member.toString());
     }
     @Test
     void getHeaders() {
@@ -93,7 +93,7 @@ class MemberForTemporaryJobTest {
     }
     @Test
     void toCSV(){
-        assertEquals("actress,Sylvia,30,magister,9,200,6",member.toCSV());
+        assertEquals("actress,Sylvia,30,master,9,200,6",member.toCSV());
     }
 
 }

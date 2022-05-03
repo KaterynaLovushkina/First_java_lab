@@ -9,7 +9,7 @@ class MemberForPermanentJobTest {
     MemberForPermanentJob member;
     @BeforeEach
     void prepareData(){
-         member=new MemberForPermanentJob("actress","Sylvia",30,"magister",9,25000);
+         member=new MemberForPermanentJob("actress","Sylvia",30,"master",9,25000);
     }
     @Test
     void testMemberGetNameMethod() {
@@ -28,7 +28,7 @@ class MemberForPermanentJobTest {
 
     @Test
     void testMemberGetEducationDegreeMethod() {
-        assertEquals("magister",member.getEducationDegree());
+        assertEquals("master",member.getEducationDegree());
     }
 
     @Test
@@ -73,7 +73,7 @@ class MemberForPermanentJobTest {
     }
     @Test
     void testMemberToStringMethod(){
-        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education Degree:'magister', Work Experience:9  Salary per month:25000.0 UAH}",member.toString());
+        assertEquals("Member{ Occupation:'actress', Name:'Sylvia', Age:30, Education Degree:'master', Work Experience:9  Salary per month:25000.0 UAH}",member.toString());
     }
 
     @Test
@@ -82,6 +82,6 @@ class MemberForPermanentJobTest {
     }
     @Test
     void toCSV(){
-        assertEquals("actress,Sylvia,30,magister,9,25000.0",member.toCSV());
+        assertEquals("actress,Sylvia,30,master,9,25000.0",member.toCSV());
     }
 }
