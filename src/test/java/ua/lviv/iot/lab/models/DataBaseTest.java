@@ -10,6 +10,10 @@ class DataBaseTest {
 
     @Test
     void testDataBaseGetMembersMethod() {
+
         assertEquals(26,DataBase.getMembers().size());
+
+        assertEquals(13,DataBase.getMembers().size());
+
     }
 }
