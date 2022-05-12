@@ -3,12 +3,14 @@ package ua.lviv.iot.lab.regex;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Collections;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+import java.util.Set;
 import java.util.Arrays;
 import java.util.Comparator;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.Collections;
 import java.util.regex.Pattern;
 
 public class Regex {
@@ -36,10 +38,10 @@ public class Regex {
         return sentances;
     }
 
-    public List<String> readFile() throws IOException {
-        List<String> listOfText=new ArrayList<>();
+    public Set<String> replaceWordsInFile() throws IOException {
+        Set<String> listOfText=new LinkedHashSet<>();
         String[] text = getTextFromFile();
-        List longestWordsList=findLongestWord();
+        List longestWordsList=getListOfLongestWordsInText();
         Pattern pattern = Pattern.compile("\\b(?i)[aieuo]\\w+");
         String str = "";
         int i=0;
@@ -56,7 +58,7 @@ public class Regex {
         }
         return listOfText;
     }
-    public List<String> findLongestWord() throws IOException {
+    public List<String> getListOfLongestWordsInText() throws IOException {
         List<String> list=new ArrayList<>();
         String[] text = getTextFromFile();
 

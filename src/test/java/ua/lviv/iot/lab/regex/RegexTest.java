@@ -1,21 +1,18 @@
 package ua.lviv.iot.lab.regex;
 
-import org.junit.jupiter.api.BeforeEach;
+import com.google.common.collect.Sets;
 import org.junit.jupiter.api.Test;
 
-import java.io.*;
-import java.lang.reflect.Array;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Set;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class RegexTest {
-    Regex regex=new Regex("/Users/katerina.../Documents/Projects/java/example/lab5-6/workFile.txt");
+    Regex regex=new Regex("/Users/katerina.../Documents/Projects/java/example/lab7/workFile.txt");
 
     @Test
     void testGetTextFromFile() throws IOException {
@@ -32,16 +29,16 @@ class RegexTest {
 
     @Test
     void testFindLongestWord() throws IOException {
-        List<String> actual = regex.findLongestWord();
+        List<String> actual = regex.getListOfLongestWordsInText();
         List<String> expected = Arrays.asList("heart-warming", "classic",
                                               "explores", "peace",
                                               "responsibilities", "cultures");
         assertEquals(expected, actual);
     }
     @Test
-    void testReadFile() throws IOException {
-        List<String> actual = regex.readFile();
-        List<String> expected = Arrays.asList(
+    void testReplaceWordsInFile() throws IOException {
+        Set<String> actual =  regex.replaceWordsInFile();
+        Set<String> expected = Sets.newHashSet(
                 "A beautiful heart-warming heart-warming tale of the March sisters .",
                 "Little Women classic a classic , loved by young and old alike .",
                 "explores explores timeless themes of love and death .",
