@@ -1,3 +1,4 @@
+
 package ua.lviv.iot.lab.models;
 
 import lombok.Getter;

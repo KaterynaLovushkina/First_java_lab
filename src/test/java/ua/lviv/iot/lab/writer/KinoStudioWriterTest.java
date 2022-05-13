@@ -1,6 +1,8 @@
 package ua.lviv.iot.lab.writer;
 
+
 import org.junit.Assert;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import ua.lviv.iot.lab.models.DataBase;
@@ -12,6 +14,9 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 class KinoStudioWriterTest {
     List<PositionInformation> members;
@@ -42,7 +47,11 @@ class KinoStudioWriterTest {
             List<String> actualString = Files.readAllLines(actualPath);
             List<String> expectedString = Files.readAllLines(expectedPath);
 
+            assertEquals(actualString, expectedString);
+
+
             Assert.assertEquals(actualString, expectedString);
+
     }
     @Test
     public void testWriteToCSVfile2() throws IOException {
@@ -55,7 +64,10 @@ class KinoStudioWriterTest {
         List<String> actualString = Files.readAllLines(actualPath);
         List<String> expectedString = Files.readAllLines(expectedPath);
 
+       assertEquals(actualString, expectedString);
+
         Assert.assertEquals(actualString, expectedString);
+
     }
     @Test
     public void testWriteToCSVfile3() throws IOException {
@@ -65,7 +77,11 @@ class KinoStudioWriterTest {
         Path expectedPath = Paths.get("expected3.csv");
         List<String> actualString = Files.readAllLines(actualPath);
         List<String> expectedString = Files.readAllLines(expectedPath);
+
+        assertEquals(actualString, expectedString);
+
         Assert.assertEquals(actualString, expectedString);
+
     }
 
 
