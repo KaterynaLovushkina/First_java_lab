@@ -1,7 +1,7 @@
 package ua.lviv.iot.lab.manager;
 
 import lombok.Getter;
-import ua.lviv.iot.lab.models.PositionInformation;
+import ua.lviv.iot.lab.rest.models.PositionInformation;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;

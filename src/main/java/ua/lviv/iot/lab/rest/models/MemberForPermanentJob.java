@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab.models;
+package ua.lviv.iot.lab.rest.models;
 import lombok.Getter;
 import lombok.Setter;
 @Getter

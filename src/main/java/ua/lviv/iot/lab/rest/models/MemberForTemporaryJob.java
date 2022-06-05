@@ -1,27 +1,40 @@
 
-package ua.lviv.iot.lab.models;
+package ua.lviv.iot.lab.rest.models;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import javax.persistence.*;
+import java.util.List;
+
+
 @Getter
 @Setter
-
-public class MemberForTemporaryJob extends PositionInformation {
+@Data
+@Entity
+@Table(name = "members")
+public class  MemberForTemporaryJob extends PositionInformation {
+    @Column(nullable = false, columnDefinition = "TEXT")
     private int salaryInUAHperHour;
+    @Column(nullable = false, columnDefinition = "TEXT")
     private int workingHoursPerDay;
 
-    public MemberForTemporaryJob(final String occupation,
-                                 final String name,
-                                 final int age,
-                                 final String educationDegree,
-                                 final int workExperience,
-                                 final int salaryInUAHperHour,
-                                 final int workingHoursPerDay) {
-        super(occupation, name, age, educationDegree, workExperience);
+    public MemberForTemporaryJob(String occupation, String name,
+                                 int age, String educationDegree,
+                                 int workExperience,int salaryInUAHperHour,
+                                 int workingHoursPerDay) {
+        super(occupation,name,age,educationDegree,workExperience);
         this.salaryInUAHperHour = salaryInUAHperHour;
         this.workingHoursPerDay = workingHoursPerDay;
+
     }
+
+    public MemberForTemporaryJob() {
+
+    }
+
 
     @Override
     public String toString() {

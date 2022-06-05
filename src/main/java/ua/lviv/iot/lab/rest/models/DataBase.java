@@ -1,5 +1,5 @@
 
-package ua.lviv.iot.lab.models;
+package ua.lviv.iot.lab.rest.models;
 
 import lombok.Getter;
 import java.util.LinkedList;
@@ -10,7 +10,7 @@ public abstract class DataBase {
 
 
     public static List<PositionInformation> getMembers() {
-        staffList.add(new MemberForTemporaryJob("production designer", "Lesya",
+        /*staffList.add(new MemberForTemporaryJob("production designer", "Lesya",
                 28, "bachelor", 5, 350, 6));
         staffList.add(new MemberForTemporaryJob("operator", "Oleksandr",
                                                 35, "master", 11, 550, 6));
@@ -36,6 +36,8 @@ public abstract class DataBase {
                                                 "bachelor", 5, 20000));
         staffList.add(new MemberForPermanentJob("producer", "Inga", 40,
                                                 "master", 13, 40000));
+
+         */
        return staffList;
     }
 
