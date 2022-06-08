@@ -1,5 +1,6 @@
 package ua.lviv.iot.lab.business;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import ua.lviv.iot.lab.dataaccess.MemberRepository;
@@ -12,7 +13,8 @@ public class MemberService {
     @Autowired
     private MemberRepository memberRepository;
 
-    public MemberForTemporaryJob createMember(MemberForTemporaryJob member) {
+    public MemberForTemporaryJob createMember(
+            final MemberForTemporaryJob member) {
         return memberRepository.save(member);
     }
 }

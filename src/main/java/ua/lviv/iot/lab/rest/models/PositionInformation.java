@@ -1,11 +1,14 @@
 package ua.lviv.iot.lab.rest.models;
 
-import lombok.AllArgsConstructor;
+
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.*;
-import java.util.List;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Column;
+
 
 @Getter
 @Setter
@@ -28,9 +31,11 @@ public abstract class PositionInformation {
         public PositionInformation() {
         }
 
-        public PositionInformation(String occupation, String name,
-                                   int age, String educationDegree,
-                                   int workExperience) {
+        public PositionInformation(final String occupation,
+                                   final String name,
+                                   final int age,
+                                   final String educationDegree,
+                                   final int workExperience) {
                 this.occupation = occupation;
                 this.name = name;
                 this.age = age;

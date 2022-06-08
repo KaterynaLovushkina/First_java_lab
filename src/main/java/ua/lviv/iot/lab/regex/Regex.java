@@ -14,13 +14,13 @@ import java.util.Collections;
 import java.util.regex.Pattern;
 
 public class Regex {
-    String path;
+    private String path;
     public Regex(String path) {
-        this.path=path;
+        this.path = path;
     }
     public String[] getTextFromFile() throws IOException {
         String[] sentances = new String[0];
-        File file=new File(this.path);
+        File file = new File(this.path);
 
         Scanner text = new Scanner(file);
         ArrayList<String> sentenceList = new ArrayList<String>();
@@ -39,14 +39,14 @@ public class Regex {
     }
 
     public Set<String> replaceWordsInFile() throws IOException {
-        Set<String> listOfText=new LinkedHashSet<>();
+        Set<String> listOfText = new LinkedHashSet<>();
         String[] text = getTextFromFile();
-        List longestWordsList=getListOfLongestWordsInText();
+        List longestWordsList = getListOfLongestWordsInText();
         Pattern pattern = Pattern.compile("\\b(?i)[aieuo]\\w+");
         String str = "";
-        int i=0;
+        int i = 0;
         for (String s3 : text) {
-            while(i<longestWordsList.size()) {
+            while(i < longestWordsList.size()) {
                 str = s3.replaceFirst(pattern.pattern(),
                                       (String)  longestWordsList.get(i));
                 listOfText.add(str);
@@ -59,13 +59,14 @@ public class Regex {
         return listOfText;
     }
     public List<String> getListOfLongestWordsInText() throws IOException {
-        List<String> list=new ArrayList<>();
+        List<String> list = new ArrayList<>();
         String[] text = getTextFromFile();
 
         for (String words:text) {
             List<String> strings = Arrays.asList(words.split(" "));
             String biggestWord = Collections.max(strings,
-                                                 Comparator.comparing(String::length));
+                                                 Comparator.comparing(
+                                                         String::length));
             list.add(biggestWord);
             System.out.println(biggestWord);
 
