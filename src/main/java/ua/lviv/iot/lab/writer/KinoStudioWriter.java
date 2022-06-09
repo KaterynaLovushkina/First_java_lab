@@ -1,15 +1,11 @@
 package ua.lviv.iot.lab.writer;
 
 
-import ua.lviv.iot.lab.models.PositionInformation;
+import ua.lviv.iot.lab.rest.models.PositionInformation;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.Writer;
-
-import ua.lviv.iot.lab.models.PositionInformation;
-
-import java.io.*;
 
 import java.nio.charset.StandardCharsets;
 import java.util.List;
@@ -19,8 +15,6 @@ public class KinoStudioWriter {
                                     List<PositionInformation> members,
 
                                     final String fileName)
-
-                                    String fileName)
 
                                     throws IOException {
         File file = new File(fileName + ".csv");

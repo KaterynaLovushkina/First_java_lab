@@ -1,5 +1,5 @@
 
-package ua.lviv.iot.lab.models;
+package ua.lviv.iot.lab.rest.models;
 
 import lombok.Getter;
 import java.util.LinkedList;
@@ -36,6 +36,7 @@ public abstract class DataBase {
                                                 "bachelor", 5, 20000));
         staffList.add(new MemberForPermanentJob("producer", "Inga", 40,
                                                 "master", 13, 40000));
+
        return staffList;
     }
 

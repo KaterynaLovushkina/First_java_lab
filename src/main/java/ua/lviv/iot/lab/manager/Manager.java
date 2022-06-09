@@ -1,7 +1,8 @@
 package ua.lviv.iot.lab.manager;
 
+
 import lombok.Getter;
-import ua.lviv.iot.lab.models.PositionInformation;
+import ua.lviv.iot.lab.rest.models.PositionInformation;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -46,7 +47,8 @@ public final class Manager {
         if (isDescendingOrder) {
             sortedStaff = sortedlist.stream()
                     .sorted(Comparator
-                    .comparing(PositionInformation::getWorkExperience).reversed())
+                    .comparing(PositionInformation::getWorkExperience)
+                            .reversed())
                     .collect(Collectors.toList());
         }
         else {
